@@ -3,8 +3,11 @@
 #ifndef GL_PANE_H
 #define GL_PANE_H
 
-#include "Shader.h"
-#include "Object.h"
+
+class Shader;
+class Object;
+// #include "Shader.h"
+// #include "Object.h"
 
 #include <wx/wx.h>
 #include <wx/glcanvas.h>

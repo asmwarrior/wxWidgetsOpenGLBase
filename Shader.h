@@ -3,7 +3,9 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include <glew.h>
+// #include <glew.h>
+//#include <glbinding/gl/gl.h>
+//using namespace gl;
 
 #include <fstream> 
 #include <iostream>

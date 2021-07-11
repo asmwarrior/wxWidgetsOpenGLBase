@@ -156,14 +156,14 @@ void GLPane::prepareGLObjects()
     m_pObj->addShader(shader);
     m_pObj->bindAll();
     m_pObj->fillBuffers();
-    m_pObj->unbindAll();  
+    m_pObj->unbindAll();
 }
 
 void GLPane::render(wxPaintEvent &evt)
 {
     if (IsShown()) {
         wxPaintDC(this);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);      
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glm::mat4 mvp = glm::rotate(m_proj, m_angle, glm::vec3(1.f, 1.f, 1.f));
         m_angle += 0.05f;
         m_pObj->setUniformMat4f("uMVP", &mvp[0][0]);

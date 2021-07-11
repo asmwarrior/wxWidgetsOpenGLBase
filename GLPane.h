@@ -38,7 +38,7 @@ private:
     int m_frameCnt;
     float m_angle;
     glm::mat4 m_proj;
-    
+
     std::chrono::time_point<std::chrono::system_clock> m_tStart;
 
     void prepareGLObjects();

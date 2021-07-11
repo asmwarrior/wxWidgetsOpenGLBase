@@ -7,7 +7,7 @@
 //#include <glbinding/gl/gl.h>
 //using namespace gl;
 
-#include <fstream> 
+#include <fstream>
 #include <iostream>
 #include <map>
 #include <string>

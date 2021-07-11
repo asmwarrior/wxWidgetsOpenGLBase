@@ -30,8 +30,8 @@ void OpenGLApp::OnIdle(wxIdleEvent &evt)
 }
 
 void OpenGLApp::prepareMainFrame()
-{   
-    m_pFrame = new MainFrame(NULL, -1, wxT("OpenGL Test"));   
+{
+    m_pFrame = new MainFrame(NULL, -1, wxT("OpenGL Test"));
     m_pFrame->Show();
 }
 

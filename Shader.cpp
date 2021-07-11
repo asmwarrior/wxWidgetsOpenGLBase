@@ -1,3 +1,7 @@
+#include <glbinding/gl/gl.h>
+
+using namespace gl;
+
 #include "Shader.h"
 
 #include <sstream>
@@ -27,7 +31,7 @@ void Shader::loadFromString(GLenum type, const std::string &source)
     glCompileShader(shader);
     GLint status;
     glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
-    if (status == GL_FALSE) {
+    if (status == (GLint)GL_FALSE) {
         GLint infoLogLength;
         glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &infoLogLength);
         GLchar *infoLog = new GLchar[infoLogLength];
@@ -100,7 +104,7 @@ void Shader::createAndLinkProgram()
     glLinkProgram(m_program);
     GLint status;
     glGetProgramiv(m_program, GL_LINK_STATUS, &status);
-    if (status == GL_FALSE) {
+    if (status == (GLint)GL_FALSE) {
         GLint infoLogLength;
         glGetProgramiv(m_program, GL_INFO_LOG_LENGTH, &infoLogLength);
         GLchar *infoLog = new GLchar[infoLogLength];

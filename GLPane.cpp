@@ -1,15 +1,12 @@
 #include "GLPane.h"
 
-#include <glm/gtc/matrix_transform.hpp>;
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "Shader.h"
 #include "Object.h"
 
 #include <iomanip>
 
-// this is only used for the function call
-// glbinding::initialize(nullptr);
-#include <glbinding/glbinding.h>
 enum IdxMode
 {
     BL2TR = 0, TL2BR = 1, ALTER = 2
@@ -100,9 +97,7 @@ GLPane::GLPane(wxFrame *parent, int *args) :
 {
     m_pContext = new wxGLContext(this);
     wxGLCanvas::SetCurrent(*m_pContext);
-
-    //glewInit();
-    glbinding::initialize(nullptr);
+    glewInit();
 
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;

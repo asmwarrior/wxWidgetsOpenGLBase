@@ -49,8 +49,9 @@
 		<Linker>
 			<Add option="-mthreads" />
 			<Add option="`wx-config-msys2 --libs=all --prefix=$(TARGET_COMPILER_DIR)`" />
-			<Add library="glbinding" />
-			<Add library="opengl32" />
+			<Add option="-lopengl32" />
+			<Add option="`pkg-config --libs glm`" />
+			<Add option="`pkg-config --libs glew`" />
 		</Linker>
 		<Unit filename="App.cpp" />
 		<Unit filename="App.h" />
@@ -73,5 +74,6 @@
 			<Option compile="1" />
 			<Option weight="0" />
 		</Unit>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

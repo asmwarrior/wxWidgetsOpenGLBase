@@ -1,10 +1,6 @@
-
-#include <glbinding/gl/gl.h>
-using namespace gl;
-
 #include "Object.h"
 
-//#include <glew.h>
+#include <GL/glew.h>
 
 #include <iostream>
 

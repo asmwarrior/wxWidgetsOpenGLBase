@@ -10,6 +10,8 @@
 #ifndef WX_PCH_H_INCLUDED
 #define WX_PCH_H_INCLUDED
 
+#include <GL/glew.h>
+
 // basic wxWidgets headers
 #include <wx/wxprec.h>
 

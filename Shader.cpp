@@ -1,7 +1,3 @@
-#include <glbinding/gl/gl.h>
-
-using namespace gl;
-
 #include "Shader.h"
 
 #include <sstream>
